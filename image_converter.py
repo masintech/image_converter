@@ -33,10 +33,18 @@ def image_convert(file, fmt):
             heif_read.mode,
             heif_read.stride,
         )
-        img.save(os.path.splitext(file)[0] + '.' + fmt)
+        try:
+            os.mkdir('converted_imgs')
+        except OSError as error:
+            print(error)
+        img.save(os.path.join("./converted_imgs" ,os.path.splitext(file)[0] + '.' + fmt))
     else:
         img = Image.open(file)
-        img.save(os.path.splitext(file)[0] + '.' + fmt)
+        try:
+            os.mkdir('converted_imgs')
+        except OSError as error:
+            print(error)
+        img.save(os.path.join("./converted_imgs" ,os.path.splitext(file)[0] + '.' + fmt))
 
 
 def main():
