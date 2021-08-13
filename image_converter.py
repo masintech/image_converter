@@ -1,12 +1,14 @@
 import os
 import argparse
 from PIL import Image
+import sys
 
 
 def get_args():
     parser = argparse.ArgumentParser(description="Please list the file and format")
     parser.add_argument(
-        "-f", "--filename", required=True, help="The image file you want to convert"
+        "-f", "--filename", nargs="+",  default=[],
+        required=True, help="The image file you want to convert"
     )
     parser.add_argument(
         "-fmt",
@@ -39,7 +41,8 @@ def image_convert(file, fmt):
 
 def main():
     args = get_args()
-    image_convert(args.filename, args.format)
+    for name in args.filename:
+        image_convert(name, args.format)
 
 
 if __name__ == "__main__":
