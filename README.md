@@ -9,6 +9,7 @@ or
 
 ex.  
 `python3 image_converter.py -f example.HEIC -fmt jpg` 
+`python3 image_converter.py -f example1.HEIC example2.HEIC example3.HEIC -fmt jpg` 
 You will see your file output with new filename extension in the directory you make command 
 
 ## Support format
