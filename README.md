@@ -2,10 +2,10 @@
 This is a hands-on simple program to convert your image into your desired format by python  
 
 ## Usage
-Like most python program, you would use them by typing in your terminal
-`python3 image_converter.py --filename {filename} --format {format exe}`  
-or 
-`python3 image_converter.py -f {filename} -fmt {format exe}` . 
+Like most python program, you would use them by typing in your terminal.   
+`python3 image_converter.py --filename {filename} --format {format exe}`    
+or   
+`python3 image_converter.py -f {filename} -fmt {format exe}`  
 
 ex.  
 `python3 image_converter.py -f example.HEIC -fmt jpg`    
